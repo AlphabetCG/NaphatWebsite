@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAPHAT Landing Page</title>
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #0f0f0f;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 36px;
+            font-family: monospace;
+            font-weight: 600;
+            position: absolute;
+            left: 50px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: rgb(151, 148, 148);
+            text-decoration: none;
+            font-size: 22px;
+            transition: color 0.3s;
+            font-family: monospace;
+        }
+
+        .navbar a:hover {
+            color: #e9950e;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: monospace;
+            background: linear-gradient(135deg, #000000, #555555);
+            margin: 0;
+            padding-top: 100px;
+            text-align: center;
+            animation: fadeIn 5s ease-in;
+        }
+
+        h1, h2 {
+            color: #e9d8d8;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 60px;
+            color: #b9b0b0;
+            margin-bottom: 50px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            margin-bottom: 50px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #201e1e;
+            margin: 0;
+            width: 100%;
+        }
+
+        /* Swapping Text Styles */
+        #about h1 {
+            color: #cbc4c4;
+            font-size: 80px;
+            text-align: left;
+            margin-left: 180px;
+            margin-bottom: 30px;
+        }
+
+        #about .swapping-text {
+            color: rgb(147, 144, 144);
+            font-size: 50px;
+            text-align: left;
+            opacity: 1;
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+        }
+
+        /* About Me Section */
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 180px;
+            margin-right: 180px;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            margin-right: 50px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .text-container h2 {
+            font-size: 36px;
+            color: #b9b0b0;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c9c3c3;
+            margin-bottom: 20px;
+        }
+
+        /* Image Swapping Section */
+        #image-swapping-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #swapping-image {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+        }
+
+        #yearSwap {
+            font-size: 50px;
+            font-weight: bolder;
+            line-height: 1.8;
+            color: #e5e0e0;
+            margin-bottom: 20px;
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+            font-family: monospace;
+        }
+
+        #schoolSwap {
+            font-size: 35px;
+            line-height: 1.8;
+            color: #b4aeae;
+            margin-bottom: 20px;
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+            font-family: monospace;
+        }
+        
+        #skillimage {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .skillimage img {
+            width: 150px;
+            height: auto;
+            border-radius: 15px;
+            margin-left: 30px; 
+            margin-bottom: 50px;
+        }
+
+        #skillimage2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .skillimage2 img {
+            width: 150px;
+            height: auto;
+            border-radius: 15px;
+            margin-left: 30px; 
+        }
+
+        .skillimage3 img {
+            width: auto;
+            height: 100px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">NAPHAT</div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Heading -->
+    <h1>Welcome to</h1>
+    <h2>Naphat Utabuawong's Website</h2>
+
+    <hr>
+
+    <!-- About Me Section with Swapping Text -->
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="IMG_2911.jpg" alt="Naphat Pic">
+            </div>
+            <div class="text-container">
+                <h2 class="swapping-text" id="swapText">Software Developer</h2>
+                <p>
+                    <strong>Naphat Utabuawong</strong> is a software developer currently studying Computer Engineering at King Mongkut's University of Technology Thonburi (KMUTT). He is also a co-founder of ACCBANA Thailand, an accounting software company.
+                </p>
+                <p>
+                    Naphat is also a musician, formerly the guitarist of the rock band <strong>SlashThree</strong>. He is a pianist and vocalist. Additionally, Naphat is a gamer, playing Valorant for the team <strong>Angel of Death</strong> in Division 19 of Valorant Premier.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="Education">
+        <h1>Education</h1>
+        <section id="image-swapping-section">
+            <img id="swapping-image" src="kmutt_logo.png" alt="Swapping Image" />
+        </section>
+        <p id="yearSwap">
+            2024-Present
+        </p>
+        <p id="schoolSwap">
+            Computer Engineering at King Mongkut University of Technology Thonburi.
+        </p>
+    </section>
+    <hr>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skillimage">
+            <img src="python.png" alt="PYTHON">
+            <img src="C_Logo.png" alt="C">
+            <img src="ISO_C++_Logo.svg.png" alt="C++">
+            <img src="Logo_C_sharp.svg.png" alt="C#">
+            <img src="unity.png" alt="Unity">
+        </div>
+        <div class="skillimage2">
+            <img src="HTML5_logo_and_wordmark.svg.png" alt="html">
+            <img src="css.png" alt="css">
+            <img src="javascript.png" alt="JavaScript">
+        </div>
+    </section>
+    <hr>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact</h1>
+        <div class="skillimage3">
+            <a href="https://www.instagram.com/naphatuta/"target="_blank">
+                <img src="instagram-icon-white-on-black-circle.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61566561616034"target="_blank">
+                <img src="facebook.png" alt="facebook">
+            </a>
+            <a href="https://github.com/AlphabetCG"target="_blank">
+                <img src="github.png" alt="github">
+            </a>
+        </div>
+    </section>
+
+    <!-- JavaScript for Synchronized Swapping Text and Image -->
+    <script>
+        const textArray = [
+            "Software Developer",
+            "Game Developer",
+            "Guitarist and Vocalist",
+            "Computer Engineering KMUTT",
+            "Gamer"
+        ];
+    
+        const images = [
+            "kmutt_logo.png",
+            "Streesmutprakan_School_logo.png",
+            "Streesmutprakan_School_logo.png",
+            "Logo_ACSP.png",
+            "swsb.png"
+        ];
+    
+        const years = [
+            "2024-Present",
+            "2021-2023",
+            "2018-2020",
+            "2015-2017",
+            "2012-2014"
+        ];
+    
+        const schools = [
+            "Computer Engineering at King Mongkut University of Technology Thonburi.",
+            "SMTE (Science Math Technology and Environment) at Streesmutprakarn School",
+            "EP (English Program) at Streesmutprakarn School",
+            "Assumption Samutprakarn School",
+            "Sarasas Withed Suvarnnabhumi"
+        ];
+    
+        let currentIndex = 0;
+
+    function swapContent() {
+        // Select elements
+        const textElement = document.getElementById("swapText");
+        const imageElement = document.getElementById("swapping-image");
+        const yearElement = document.getElementById("yearSwap");
+        const schoolElement = document.getElementById("schoolSwap");
+
+        // Start fade-out
+        textElement.style.opacity = 0; // Fade out text
+        imageElement.style.opacity = 0; // Fade out image
+        yearElement.style.opacity = 0; // Fade out year
+        schoolElement.style.opacity = 0; // Fade out school
+
+        // Set a timeout for the fade-out duration (500ms)
+        setTimeout(() => {
+            // Update the content after fade-out is complete
+            currentIndex = (currentIndex + 1) % images.length;
+            textElement.textContent = textArray[currentIndex];
+            imageElement.src = images[currentIndex];
+            yearElement.textContent = years[currentIndex];
+            schoolElement.textContent = schools[currentIndex];
+
+            // Fade in
+            textElement.style.opacity = 1; // Fade in text
+            imageElement.style.opacity = 1; // Fade in image
+            yearElement.style.opacity = 1; // Fade in year
+            schoolElement.style.opacity = 1; // Fade in school
+
+        }, 1000); // Matches CSS transition duration
+    }
+
+    // Change content every 5 seconds
+    setInterval(swapContent, 5000);
+    </script>
+    
+</body>
+</html>

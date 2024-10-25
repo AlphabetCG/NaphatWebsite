@@ -1,0 +1,263 @@
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Adjust text color for better contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 60px; /* For navbar spacing */
+    animation: fadeIn 5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 3;
+    }
+}
+
+h1 {
+    color: rgb(11, 11, 12);
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+header h2 {
+    color: rgb(25, 25, 26);
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+}
+
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    color: rgb(37, 35, 39);
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+p {
+    font-size: 26px;
+    color: black;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    margin: 20px auto;
+    width: 80
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Remove underline from links */
+a.education-link {
+    text-decoration: none;
+    color: inherit; /* Inherit the text color from the parent */
+}
+
+/* Styling for the education section */
+.education-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    min-height: 120px; /* Minimum height */
+    min-width: 900px; /* Increase the width to make the box longer */
+    max-width: 1200px; /* Set a maximum width */
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Style the images in education entries */
+.education-entry img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for entire education entry */
+.education-entry:hover {
+    background-color: #eaf2f8;
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.education-entry h3 {
+    color: #212425;
+    font-size: 22px;
+    margin-right: 6px;
+    font-weight: bold;
+}
+
+.education-entry p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+}
+
+/* General section styling */
+section {
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between skill entries */
+    margin-top: 20px; /* Space above the skills section */
+}
+
+.skill-entry {
+    background-color: #f7f7f7; /* Light background for each skill box */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.2s ease; /* Transition for hover effect */
+}
+
+.skill-entry h3 {
+    color: #2980b9; /* Header color */
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.skill-entry p {
+    font-size: 14px;
+    color: #555; /* Text color */
+    margin: 0;
+}
+
+/* Hover effect for skill entries */
+.skill-entry:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #eaf2f8; /* Change background color on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0f0f0f; /* Navbar background color */
+    padding: 10px; /* Padding around the navbar */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the links */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between each link */
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 22px; /* Font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+/* Add spacing to the top of the body to prevent content from being hidden behind the fixed navbar */
+body {
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Contact Section Styling */
+.social-media {
+    text-align: center; /* Center align content */
+    margin-top: 20px; /* Space above the social media section */
+}
+
+.instagram-logo {
+    width: 30px; /* Set width of the Instagram logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Space between profile picture and logo */
+}
+
+.instagram-icon {
+    font-size: 80px; /* Adjust icon size */
+    color: #E1306C; /* Instagram's brand color */
+    margin-left: 10px; /* Space between profile picture and icon */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.button-container {
+    display: flex; /* Use Flexbox to arrange items in a row */
+    justify-content: center; /* Center align the buttons horizontally */
+    margin-top: 20px; /* Add some space above the button container */
+    }
+
+    .cta-button {
+    background-color: #121213; /* Button background color */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    }
+
+    .cta-button:hover {
+    background-color: #131414; /* Darker shade on hover */
+    }
+
+    footer {
+        text-align: center;
+    }
